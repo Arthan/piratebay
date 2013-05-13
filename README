@@ -1,0 +1,34 @@
+Piratebay
+=========
+  Piratebay is a thepiratebay dot org screenscraper, with it one can easily search for torrents.
+  Order by any column, such as user / seeders / leechers. It is in early stages right now, but more
+  features are being implemented by the day.
+  
+  Missing features:
+  ================
+    - easily download a torrent file.
+    - parse the torrent info page.
+      - parse the comments.
+      - the descriptions.
+      - etc...
+    - sphinx documentation.
+
+Installing
+==========
+  It is using distutils(setup.py), so you can easily install this on most system with no trouble.
+  From the base dir:
+  python setup.py install (you would need root access depending on the system being used(`sudo'))
+  
+  You can download the latest versions released from http://pypi.python.org/pypi/piratebay/
+  or download the development version straight from the mercurial repository hosted by me at:
+  http://hg.sobber.org/piratebay.
+
+Documentation
+=============
+  Is currently lacking, about every method is documented in the source. But there are no external,
+  but that will be added using sphinx(http://sphinx.pocoo.org) soon enough when there is some time over.
+  
+  Example usages of this package, and what it can do is in the examples folder.
+
+
+  

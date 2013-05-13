@@ -1,0 +1,44 @@
+Changelog
+=========
+
+v0.3.0
+------
+  Major additions:
+  ----------------
+    * Added parsing of date, time and size of the uploaded torrent to the parser.
+    * Added the ability to parse the torrent info urls for more in-depth information.
+    * Added query_torrent_info_page to piratebay.internet.
+  
+  Minor additions / fixes:
+  ------------------------
+    * Changed the name of the test folder from "tests" to "test".
+    * Enhanced PageItem's __str__ method to be more generic and robust.
+    * Updated setup.py with more information such as classifiers.
+    * Added a manifest file.
+    * Fixed a bug for the parsing of the torrent info urls, that when the
+      definition list is split in two(it sometimes is), to also parse that.
+
+v0.2.0
+------
+  Major additions:
+  ----------------
+    * Majorly refactored the code into other modules.
+    * Added piratebay.page.PageCollection class.
+    * Refactored .search/.all into a SearchMixIn class. (To reduce code duplication)
+    * Added piratebay.internet.search_main_pages.
+  
+  Minor additions / fixes:
+  ------------------------
+    * Updated all the examples, including a new example for search_main_pages.
+    * Added boundary check to search_mains argument 'page', not to allow negative numbers.
+    * Fixed a bug that allowed the Page class to add empty rows to its page item list.
+    * Updated all the unit tests to reflect the major refactoring being done.
+      Most of the things were internally only, but some of the refactored code
+      did show itself in the public interface. It is mainly due to moving some
+      functions / classes to more appropriate modules.
+
+v0.1.7
+--------
+  * Added timeout parameter to search_main, search_user and open_url_with_request.
+  * Changed Page.search/.all to allow for a limit parameter, to limit the results.
+  
