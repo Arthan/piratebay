@@ -1,12 +1,12 @@
 Metadata-Version: 1.0
 Name: piratebay
-Version: 0.3.1
-Summary: A python interface to thepiratebay dot org.
+Version: 0.3.2
+Summary: A python interface to thepiratebay.
 Home-page: http://hg.sobber.org/piratebay
 Author: sobber
 Author-email: alex.borgert@gmail.com
 License: MIT/X
-Description: A python interface to thepiratebay dot org.
+Description: A python interface to thepiratebay.
 Platform: UNKNOWN
 Classifier: Development Status :: 4 - Beta
 Classifier: Environment :: Console

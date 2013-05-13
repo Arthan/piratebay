@@ -294,7 +294,7 @@ class TorrentInfoParser(BaseParser):
             * rating (how good is the torrent?)
             * uploaded at date.
             * who uploaded it.
-            * is the uploader a trusted user?
+            * is the uploader a trusted or vip user?
             * seeders & leechers statistics.
         *Returns*
             a dictionary with the possible keys:
@@ -306,6 +306,7 @@ class TorrentInfoParser(BaseParser):
                 * uploaded_at
                 * user
                 * trusted
+                * vip
                 * seeders
                 * leechers
         """
@@ -359,6 +360,11 @@ class TorrentInfoParser(BaseParser):
                         data["trusted"] = True
                     else:
                         data["trusted"] = False
+                    if img_link is not None\
+                        and img_link.get("alt") == "VIP":
+                        data["vip"] = True
+                    else:
+                        data["vip"] = False
                 elif label == "seeders":
                     data["seeders"] = int(dd.text.strip())
                 elif label == "leechers":
