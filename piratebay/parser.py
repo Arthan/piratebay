@@ -84,7 +84,10 @@ class TorrentTableParser(BaseParser):
         a_eles = element.findall('a')
         current_page = find_current_page(a_eles)
         if len(a_eles) <= 0:
-            raise exceptions.ElementNotFound("Incorrect element found")
+            if element.text:
+                raise exceptions.ElementNotFound("Incorrect element found")
+            else:
+                return 1, 1
 
         num_pages = int(find_last_link(a_eles).text_content())
         return current_page, num_pages
